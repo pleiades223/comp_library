@@ -57,7 +57,7 @@ data:
   isVerificationFile: false
   path: graph/Weighted Union Find.hpp
   requiredBy: []
-  timestamp: '2024-02-25 23:37:47+09:00'
+  timestamp: '2024-02-25 23:17:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/Weighted Union Find.test.cpp

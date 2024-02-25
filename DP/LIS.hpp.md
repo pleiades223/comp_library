@@ -27,7 +27,7 @@ data:
   isVerificationFile: false
   path: DP/LIS.hpp
   requiredBy: []
-  timestamp: '2024-02-25 23:37:47+09:00'
+  timestamp: '2024-02-25 22:18:52+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/LIS.test.cpp

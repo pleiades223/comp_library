@@ -29,7 +29,7 @@ data:
   isVerificationFile: true
   path: verify/LIS.test.cpp
   requiredBy: []
-  timestamp: '2024-02-25 23:37:47+09:00'
+  timestamp: '2024-02-25 22:55:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/LIS.test.cpp

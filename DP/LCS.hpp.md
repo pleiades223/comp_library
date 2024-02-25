@@ -28,7 +28,7 @@ data:
   isVerificationFile: false
   path: DP/LCS.hpp
   requiredBy: []
-  timestamp: '2024-02-25 23:37:47+09:00'
+  timestamp: '2024-02-25 22:19:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/LCS.test.cpp
