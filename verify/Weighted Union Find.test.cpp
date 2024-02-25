@@ -16,7 +16,11 @@ int main(){
         }else{
             int x, y;
             std::cin >> x >> y;
-            std::cout << uf.diff(x,y) << std::endl;
+            if(uf.same(x,y)){
+                std::cout << uf.diff(x,y) << std::endl;
+            }else{
+                std::cout << "?" << std::endl;
+            }
         }
     }
 }
