@@ -1,3 +1,7 @@
+---
+title: Weighted Union Find
+documentation_of: ./graph/Weighted Union Find.hpp
+---
 ## 計算量
 初期化　O(N)
 クエリ　O(α(N))
