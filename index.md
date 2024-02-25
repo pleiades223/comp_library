@@ -1,19 +1,19 @@
 ---
 data:
   libraryCategories:
-  - name: docs
+  - name: DP
     pages:
-    - icon: ':warning:'
-      path: docs/LCS.hpp
-      title: docs/LCS.hpp
-    - icon: ':warning:'
-      path: docs/LIS.hpp
-      title: docs/LIS.hpp
+    - icon: ':heavy_check_mark:'
+      path: DP/LCS.hpp
+      title: "LCS(\u6700\u9577\u5171\u901A\u90E8\u5206\u5217)"
+    - icon: ':heavy_check_mark:'
+      path: DP/LIS.hpp
+      title: "LIS(\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217)"
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
       path: graph/Weighted Union Find.hpp
-      title: graph/Weighted Union Find.hpp
+      title: Weighted Union Find
   verificationCategories:
   - name: verify
     pages:

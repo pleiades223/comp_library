@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/Weighted Union Find.hpp
-    title: graph/Weighted Union Find.hpp
+    title: Weighted Union Find
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
