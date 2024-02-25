@@ -1,14 +1,14 @@
 ---
 data:
   libraryCategories:
-  - name: DP
+  - name: docs
     pages:
-    - icon: ':heavy_check_mark:'
-      path: DP/LCS.hpp
-      title: DP/LCS.hpp
-    - icon: ':heavy_check_mark:'
-      path: DP/LIS.hpp
-      title: DP/LIS.hpp
+    - icon: ':warning:'
+      path: docs/LCS.hpp
+      title: docs/LCS.hpp
+    - icon: ':warning:'
+      path: docs/LIS.hpp
+      title: docs/LIS.hpp
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
