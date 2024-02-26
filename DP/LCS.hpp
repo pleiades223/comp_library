@@ -1,11 +1,9 @@
 #pragma once
-/*
-最長共通部分列
-O( |A| x |B| )
-*/
-
 #include<vector>
-
+/**
+* 最長共通部分列
+* O( |A| x |B| )
+*/
 template <typename T>
 int LCS(T a,T b){
     std::vector<std::vector<int>> dp(a.size()+1,std::vector<int>(b.size()+1,0));

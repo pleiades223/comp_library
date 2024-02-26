@@ -1,22 +1,14 @@
 #pragma once
-
-/*
-重み付きUnion Find
-leader(i) rootを返す
-merge(a,b,w) aとbをマージしbはaよりw重くする。新しい代表元を返す
-diff(a,b) b-aを返す
-same(a,b) 同じ連結成分か判定
-size(i) iの連結成分の頂点数
-*/
-
 #include <vector>
-
 struct WeightUnionfind{
     WeightUnionfind(int n){
         parents_size.resize(n,-1);
         Weight_list.resize(n);
     }
 
+    /**
+    * iが属する連結成分の代表元
+    */
     int leader(int i){
         if(parents_size[i]<0){
             return i;
@@ -26,6 +18,9 @@ struct WeightUnionfind{
         return (parents_size[i]=root);
     }
 
+    /**
+    * aとbをマージしbはaよりw重くする。新しい代表元を返す
+    */
     int merge(int a,int b,long long w){
         w+=weight(a);
         w-=weight(b);
@@ -43,14 +38,23 @@ struct WeightUnionfind{
         return leader(a);
     }
 
+    /**
+    * b-a
+    */
     long long diff(int a,int b){
         return (weight(b)-weight(a));
     }
 
+    /**
+    * aとbが同じ連結成分か
+    */
     bool same(int a,int b){
         return (leader(a)==leader(b));
     }
 
+    /**
+    * iが属する連結成分の大きさ
+    */
     int size(int i){
         return -parents_size[leader(i)];
     }
