@@ -14,6 +14,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/Weighted Union Find.hpp
       title: Weighted Union Find
+  - name: template
+    pages:
+    - icon: ':warning:'
+      path: template/include.hpp
+      title: template/include.hpp
+    - icon: ':warning:'
+      path: template/template.hpp
+      title: template/template.hpp
   verificationCategories:
   - name: verify
     pages:

@@ -38,7 +38,7 @@ data:
   isVerificationFile: true
   path: verify/Weighted Union Find.test.cpp
   requiredBy: []
-  timestamp: '2024-02-25 23:21:24+09:00'
+  timestamp: '2024-02-26 21:38:10+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/Weighted Union Find.test.cpp
