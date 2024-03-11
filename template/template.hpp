@@ -1,13 +1,30 @@
+#if __INCLUDE_LEVEL__ == 0
+#include __FILE__
+
+//using mint = modint1000000007;
+//using mint = modint998244353;
+
+int main(){
+    
+}
+
+#else
+
+#if __has_include(<template/include.hpp>)
+#include <template/include.hpp>
+#else
 #include<bits/stdc++.h>
+#if __has_include(<atcoder/all>)
+#include<atcoder/all>
+#endif
+#endif
 
 #pragma GCC target("avx2")
 #pragma GCC optimize("O3")
 #pragma GCC optimize("unroll-loops")
-#include <bits/stdc++.h>
 using namespace std;
 
 #if __has_include(<atcoder/all>)
-#include <atcoder/all>
 using namespace atcoder;
 void output(modint1000000007 x){cout << x.val();}
 void output(modint998244353 x){cout << x.val();}
@@ -62,34 +79,10 @@ template<typename T,typename Y> using uomap = unordered_map<T,Y>;
 template<typename T> using uoset = unordered_set<T>;
 template<typename T> using revpriority_queue = priority_queue<T,vector<T>,greater<T>>;
 
-int _dx[4] = { 1,0,-1,0 };
-int _dy[4] = { 0,1,0,-1 };
-int _ddx[8] = { -1,0,1,1,1,0,-1,-1 };
-int _ddy[8] = { 1,1,1,0,-1,-1,-1,0 };
-/**
-* 1,0,-1,0
-*/
-int dx(int x){
-    return _dx[x%4];
-}
-/**
-* 0,1,0,-1
-*/
-int dy(int y){
-    return _dy[y%4];
-}
-/**
-* -1,0,1,1,1,0,-1,-1
-*/
-int ddx(int x){
-    return _ddx[x%8];
-}
-/**
-* 1,1,1,0,-1,-1,-1,0
-*/
-int ddy(int y){
-    return _ddy[y%8];
-}
+int dx[4] = { 1,0,-1,0 };
+int dy[4] = { 0,1,0,-1 };
+int ddx[8] = { -1,0,1,1,1,0,-1,-1 };
+int ddy[8] = { 1,1,1,0,-1,-1,-1,0 };
 constexpr long double lpi = 3.141592653589793238;
 constexpr double pi = 3.141592653589793;
 ll mod = 1000000007;
@@ -146,3 +139,6 @@ template<typename... T>constexpr auto max(T... a){return max(initializer_list<co
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(),x.rend()
 #define Endl endl
+#define endl "\n"
+
+#endif
