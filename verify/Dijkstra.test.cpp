@@ -6,7 +6,7 @@ int main(){
     int v,e,r;
     std::cin >> v >> e >> r;
     Graph<int> g(v);
-    g.read(e,true,0);
+    g.read(e,true,0,true);
     auto vec=dijkstra(g,r,1000000001);
     for(auto e:vec.dist){
         if(e==1000000001){
