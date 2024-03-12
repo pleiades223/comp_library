@@ -11,10 +11,10 @@ data:
       title: "LIS(\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217)"
   - name: graph
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/Dijkstra.hpp
       title: graph/Dijkstra.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/Graph-template.hpp
       title: "\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
     - icon: ':heavy_check_mark:'
@@ -31,7 +31,7 @@ data:
   verificationCategories:
   - name: verify
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/Dijkstra.test.cpp
       title: verify/Dijkstra.test.cpp
     - icon: ':heavy_check_mark:'
