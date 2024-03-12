@@ -1,8 +1,8 @@
 #pragma once
 #include<vector>
 /**
-* 最長共通部分列
-* O( |A| x |B| )
+ * 最長共通部分列
+ * O( |A| x |B| )
 */
 template <typename T>
 int LCS(T a,T b){

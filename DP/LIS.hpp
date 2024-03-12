@@ -1,8 +1,8 @@
 #pragma once
 #include<vector>
 /**
-* 最長増加部分列
-* O( N log N )
+ * 最長増加部分列
+ * O( N log N )
 */
 template<typename T>
 std::vector<int> LIS(std::vector<T> &vec){

@@ -1,5 +1,8 @@
 #pragma once
 #include <vector>
+/**
+ * 重み付きUnion Find
+*/
 struct WeightUnionfind{
     WeightUnionfind(int n){
         parents_size.resize(n,-1);
@@ -7,7 +10,8 @@ struct WeightUnionfind{
     }
 
     /**
-    * iが属する連結成分の代表元
+     * leader(i)
+     * rootを返す
     */
     int leader(int i){
         if(parents_size[i]<0){
@@ -19,7 +23,9 @@ struct WeightUnionfind{
     }
 
     /**
-    * aとbをマージしbはaよりw重くする。新しい代表元を返す
+     * merege(a,b,long long w)
+     * aとbをマージしbはaよりw重くする
+     * rootを返す
     */
     int merge(int a,int b,long long w){
         w+=weight(a);
@@ -39,21 +45,24 @@ struct WeightUnionfind{
     }
 
     /**
-    * b-a
+     * diff(a,b)
+     * b-aを返す
     */
     long long diff(int a,int b){
         return (weight(b)-weight(a));
     }
 
     /**
-    * aとbが同じ連結成分か
+     * same(a,b)
+     * 同じ連結成分か判定
     */
     bool same(int a,int b){
         return (leader(a)==leader(b));
     }
 
     /**
-    * iが属する連結成分の大きさ
+     * size(i)
+     * iの連結成分の頂点数
     */
     int size(int i){
         return -parents_size[leader(i)];
