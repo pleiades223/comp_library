@@ -1,21 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: graph/Dijkstra.hpp
     title: graph/Dijkstra.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: graph/Graph-template.hpp
     title: "\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_A
     links:
     - https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_A
-  bundledCode: "#line 1 \"verify/Dijkstra.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_A\"\
+  bundledCode: "#line 1 \"verify/Dijkstra.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_A\"\
     \n#include <iostream>\n#include <graph/Dijkstra.hpp>\n\nint main(){\n    int v,e,r;\n\
     \    std::cin >> v >> e >> r;\n    Graph<int> g(v);\n    g.read(e,true,0);\n \
     \   auto vec=dijkstra(g,r,1000000001);\n    for(auto e:vec.dist){\n        if(e==1000000001){\n\
@@ -30,16 +32,16 @@ data:
   dependsOn:
   - graph/Dijkstra.hpp
   - graph/Graph-template.hpp
-  isVerificationFile: false
-  path: verify/Dijkstra.cpp
+  isVerificationFile: true
+  path: verify/Dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2024-03-12 16:20:16+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2024-03-12 16:29:26+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/Dijkstra.cpp
+documentation_of: verify/Dijkstra.test.cpp
 layout: document
 redirect_from:
-- /library/verify/Dijkstra.cpp
-- /library/verify/Dijkstra.cpp.html
-title: verify/Dijkstra.cpp
+- /verify/verify/Dijkstra.test.cpp
+- /verify/verify/Dijkstra.test.cpp.html
+title: verify/Dijkstra.test.cpp
 ---

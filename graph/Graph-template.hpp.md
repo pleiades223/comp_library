@@ -2,16 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: graph/Dijkstra.hpp
     title: graph/Dijkstra.hpp
-  - icon: ':warning:'
-    path: verify/Dijkstra.cpp
-    title: verify/Dijkstra.cpp
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: verify/Dijkstra.test.cpp
+    title: verify/Dijkstra.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"graph/Graph-template.hpp\"\n/*\r\n\u30B0\u30E9\u30D5\u30C6\
@@ -87,10 +87,10 @@ data:
   path: graph/Graph-template.hpp
   requiredBy:
   - graph/Dijkstra.hpp
-  - verify/Dijkstra.cpp
   timestamp: '2024-03-12 16:20:16+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - verify/Dijkstra.test.cpp
 documentation_of: graph/Graph-template.hpp
 layout: document
 title: "\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
