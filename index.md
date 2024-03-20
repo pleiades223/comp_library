@@ -20,6 +20,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/Weighted Union Find.hpp
       title: Weighted Union Find
+  - name: math
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: math/Eratosthenes.hpp
+      title: math/Eratosthenes.hpp
   - name: template
     pages:
     - icon: ':warning:'
@@ -34,6 +39,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/Dijkstra.test.cpp
       title: verify/Dijkstra.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/Eratosthenes.test.cpp
+      title: verify/Eratosthenes.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/LCS.test.cpp
       title: verify/LCS.test.cpp
