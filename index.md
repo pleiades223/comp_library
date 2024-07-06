@@ -14,10 +14,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/Dijkstra.hpp
       title: Dijkstra
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/Graph-template.hpp
       title: "\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/Tree-Diameter.hpp
       title: "Tree-Diameter(\u6728\u306E\u76F4\u5F84)"
     - icon: ':warning:'
@@ -64,7 +64,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/LIS.test.cpp
       title: verify/LIS.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/Tree-Diameter.test.cpp
       title: verify/Tree-Diameter.test.cpp
     - icon: ':heavy_check_mark:'

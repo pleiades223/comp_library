@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/Graph-template.hpp
     title: "\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/Tree-Diameter.test.cpp
     title: verify/Tree-Diameter.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Tree-Diameter(\u6728\u306E\u76F4\u5F84)"
     links: []
@@ -54,15 +54,15 @@ data:
     \ int &k) const {\r\n        return g[k];\r\n    }\r\n};\n#line 3 \"graph/Tree-Diameter.hpp\"\
     \n#include <queue>\n/**\n * @brief Tree-Diameter(\u6728\u306E\u76F4\u5F84)\n*/\n\
     \n/**\n * @brief \u6728\u306E\u76F4\u5F84\n * \n */\ntemplate<typename T = long\
-    \ long>\nstruct TreeDiameter{\n    vector<Edge<T>> path;\n    Graph<T> &g;\n \
-    \   TreeDiameter(Graph<T> &_g) : g(_g) {}\n    /**\n     * @brief \u69CB\u7BC9\
+    \ long>\nstruct TreeDiameter{\n    std::vector<Edge<T>> path;\n    Graph<T> &g;\n\
+    \    TreeDiameter(Graph<T> &_g) : g(_g) {}\n    /**\n     * @brief \u69CB\u7BC9\
     \n     * \n     * @return T \n     */\n    T build(){\n        to.assign(g.size(),-1);\n\
     \        auto p = dfs(0,-1);\n        auto q = dfs(p.second,-1);\n\n        int\
     \ now = p.second;\n        while(now != p.second){\n            for(auto &e :\
     \ g[now]){\n                if (to[now] == e.to){\n                    path.emplace_back(e);\n\
     \                }\n            }\n            now = to[now];\n        }\n   \
-    \     return q.first;\n    }\n    private:\n    vector<int> to;\n\n    pair<T,int>dfs(int\
-    \ idx,int par){\n        pair<T,int> ret(0,idx);\n        for(auto &e : g[idx]){\n\
+    \     return q.first;\n    }\n    private:\n    std::vector<int> to;\n\n    std::pair<T,int>dfs(int\
+    \ idx,int par){\n        std::pair<T,int> ret(0,idx);\n        for(auto &e : g[idx]){\n\
     \            if(e.to == par) continue;\n            auto cost = dfs(e.to,idx);\n\
     \            cost.first += e.cost;\n            if(ret < cost){\n            \
     \    ret = cost;\n                to[idx] = e.to;\n            }\n        }\n\
@@ -70,26 +70,26 @@ data:
   code: "#pragma once\n#include \"graph/Graph-template.hpp\"\n#include <queue>\n/**\n\
     \ * @brief Tree-Diameter(\u6728\u306E\u76F4\u5F84)\n*/\n\n/**\n * @brief \u6728\
     \u306E\u76F4\u5F84\n * \n */\ntemplate<typename T = long long>\nstruct TreeDiameter{\n\
-    \    vector<Edge<T>> path;\n    Graph<T> &g;\n    TreeDiameter(Graph<T> &_g) :\
-    \ g(_g) {}\n    /**\n     * @brief \u69CB\u7BC9\n     * \n     * @return T \n\
+    \    std::vector<Edge<T>> path;\n    Graph<T> &g;\n    TreeDiameter(Graph<T> &_g)\
+    \ : g(_g) {}\n    /**\n     * @brief \u69CB\u7BC9\n     * \n     * @return T \n\
     \     */\n    T build(){\n        to.assign(g.size(),-1);\n        auto p = dfs(0,-1);\n\
     \        auto q = dfs(p.second,-1);\n\n        int now = p.second;\n        while(now\
     \ != p.second){\n            for(auto &e : g[now]){\n                if (to[now]\
     \ == e.to){\n                    path.emplace_back(e);\n                }\n  \
     \          }\n            now = to[now];\n        }\n        return q.first;\n\
-    \    }\n    private:\n    vector<int> to;\n\n    pair<T,int>dfs(int idx,int par){\n\
-    \        pair<T,int> ret(0,idx);\n        for(auto &e : g[idx]){\n           \
-    \ if(e.to == par) continue;\n            auto cost = dfs(e.to,idx);\n        \
-    \    cost.first += e.cost;\n            if(ret < cost){\n                ret =\
-    \ cost;\n                to[idx] = e.to;\n            }\n        }\n        return\
-    \ ret;\n    }\n};\n"
+    \    }\n    private:\n    std::vector<int> to;\n\n    std::pair<T,int>dfs(int\
+    \ idx,int par){\n        std::pair<T,int> ret(0,idx);\n        for(auto &e : g[idx]){\n\
+    \            if(e.to == par) continue;\n            auto cost = dfs(e.to,idx);\n\
+    \            cost.first += e.cost;\n            if(ret < cost){\n            \
+    \    ret = cost;\n                to[idx] = e.to;\n            }\n        }\n\
+    \        return ret;\n    }\n};\n"
   dependsOn:
   - graph/Graph-template.hpp
   isVerificationFile: false
   path: graph/Tree-Diameter.hpp
   requiredBy: []
-  timestamp: '2024-07-07 00:21:01+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-07-07 00:36:06+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/Tree-Diameter.test.cpp
 documentation_of: graph/Tree-Diameter.hpp

@@ -5,19 +5,19 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/Dijkstra.hpp
     title: Dijkstra
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/Tree-Diameter.hpp
     title: "Tree-Diameter(\u6728\u306E\u76F4\u5F84)"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/Dijkstra.test.cpp
     title: verify/Dijkstra.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/Tree-Diameter.test.cpp
     title: verify/Tree-Diameter.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u4E00\u65B9\u901A\u884C\u306E\u8FBA\u3092\u8FFD\u52A0"
     links: []
@@ -102,7 +102,7 @@ data:
   - graph/Tree-Diameter.hpp
   - graph/Dijkstra.hpp
   timestamp: '2024-07-07 00:15:29+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/Dijkstra.test.cpp
   - verify/Tree-Diameter.test.cpp

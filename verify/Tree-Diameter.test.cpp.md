@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/Graph-template.hpp
     title: "\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/Tree-Diameter.hpp
     title: "Tree-Diameter(\u6728\u306E\u76F4\u5F84)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_A
@@ -31,8 +31,8 @@ data:
   isVerificationFile: true
   path: verify/Tree-Diameter.test.cpp
   requiredBy: []
-  timestamp: '2024-07-07 00:21:01+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-07-07 00:36:06+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/Tree-Diameter.test.cpp
 layout: document
