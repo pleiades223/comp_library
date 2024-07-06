@@ -1,12 +1,19 @@
 #pragma once
-#include<graph/Graph-template.hpp>
-#include<queue>
+#include "graph/Graph-template.hpp"
+#include <queue>
+/**
+ * @brief Dijkstra
+*/
 
 /**
- * dist:startからの距離
- * from:直前の頂点
- * id:最後に使用した辺
-*/
+ * @brief Dijkstra
+ * 
+ * @tparam long long
+ * @param g グラフ
+ * @param start スタートの頂点
+ * @param INF 定数
+ * @return Shortest_path<T> 
+ */
 template<typename T = long long>
 Shortest_path<T> dijkstra(const Graph<T>&g,int start,T INF){
     std::vector<T> dist(g.size(),INF);

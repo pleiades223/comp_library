@@ -1,3 +1,15 @@
+#if __INCLUDE_LEVEL__ == 0
+#include __FILE__
+
+//using mint = modint1000000007;
+//using mint = modint998244353;
+
+int main(){
+    
+}
+
+#else
+
 #if __has_include(<template/include.hpp>)
 #include <template/include.hpp>
 #else
@@ -128,3 +140,5 @@ template<typename... T>constexpr auto max(T... a){return max(initializer_list<co
 #define rall(x) x.rbegin(),x.rend()
 #define Endl endl
 #define endl "\n"
+
+#endif

@@ -1,9 +1,17 @@
 #pragma once
 #include<vector>
 /**
- * 最長増加部分列
+ * @brief LIS 最長増加部分列
  * O( N log N )
 */
+
+/**
+ * @brief LIS 最長増加部分列
+ * 
+ * @tparam T 
+ * @param vec 
+ * @return std::vector<int> 
+ */
 template<typename T>
 std::vector<int> LIS(std::vector<T> &vec){
     std::vector<int> ans;

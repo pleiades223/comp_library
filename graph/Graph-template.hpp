@@ -1,7 +1,4 @@
 #pragma once
-/*
-グラフテンプレート
-*/
 #include <vector>
 #include <iostream>
 
@@ -39,8 +36,12 @@ struct Graph{
     }
 
     /**
-     * 一方通行の辺追加
-    */
+     * @brief 一方通行の辺を追加
+     * 
+     * @param from 
+     * @param to 
+     * @param cost 
+     */
     void add_direct(int from,int to,T cost=1){
         g[from].emplace_back(from,to,cost,es);
         edges.emplace_back(from,to,cost,es);
@@ -48,8 +49,12 @@ struct Graph{
     }
 
     /**
-     * 双方向の辺追加
-    */
+     * @brief 双方向の辺を追加
+     * 
+     * @param from 
+     * @param to 
+     * @param cost 
+     */
     void add(int from,int to,T cost=1){
         g[from].emplace_back(from,to,cost,es);
         g[to].emplace_back(to,from,cost,es);
@@ -58,13 +63,13 @@ struct Graph{
     }
 
     /**
-     * M:辺の数
-     * cost:コストの有無
-     * p:入力が1-indexedなら-1
-     * direct:一方通行ならtrue(u to v)
-     * u v (cost)
-     * ...
-    */
+     * @brief 読み込み
+     * 
+     * @param M 辺の数
+     * @param cost コストの有無
+     * @param p 入力が1-indexedなら-1
+     * @param direct 一方通行ならtrue(u to v)
+     */
     void read(int M, bool cost = false, int p = -1,bool direct = false){
         for(int i=0;i<M;i++){
             int u,v;
@@ -78,8 +83,11 @@ struct Graph{
     }
 
     /**
-     * Edgesを読み込む
-    */
+     * @brief Edgesを読み込む
+     * 
+     * @param _edges 
+     * @param direct 
+     */
     void read_edges(Edges<T> &_edges,bool direct = true){
         for(auto edge:_edges){
             if(direct){

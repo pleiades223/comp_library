@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 /**
- * 重み付きUnion Find
+ * @brief Weighted Union Find
 */
 struct WeightUnionfind{
     WeightUnionfind(int n){
