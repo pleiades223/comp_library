@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_B"
 #include <iostream>
-#include <graph/Weighted Union Find.hpp>
+#include <graph/Weighted-Union-Find.hpp>
 
 int main(){
     int n, q;
