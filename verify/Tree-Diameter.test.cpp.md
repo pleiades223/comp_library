@@ -14,14 +14,14 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_A
     links:
-    - https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D
-  bundledCode: "#line 1 \"verify/Tree-Diameter.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D\"\
+    - https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_A
+  bundledCode: "#line 1 \"verify/Tree-Diameter.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_A\"\
     \n#include <graph/Tree-Diameter.hpp>\n\nint main(){\n    int n;\n    std::cin\
     \ >> n;\n    Graph g(n);\n    g.read(n-1,true,0,false);\n    std::cout << TreeDiameter(g).build()\
     \ << std::endl;\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D\"\n#include\
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_A\"\n#include\
     \ <graph/Tree-Diameter.hpp>\n\nint main(){\n    int n;\n    std::cin >> n;\n \
     \   Graph g(n);\n    g.read(n-1,true,0,false);\n    std::cout << TreeDiameter(g).build()\
     \ << std::endl;\n}"
@@ -31,7 +31,7 @@ data:
   isVerificationFile: true
   path: verify/Tree-Diameter.test.cpp
   requiredBy: []
-  timestamp: '2024-07-07 00:15:29+09:00'
+  timestamp: '2024-07-07 00:21:01+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: verify/Tree-Diameter.test.cpp
