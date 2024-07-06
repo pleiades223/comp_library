@@ -11,7 +11,7 @@
  */
 template<typename T = long long>
 struct TreeDiameter{
-    vector<Edge<T>> path;
+    std::vector<Edge<T>> path;
     Graph<T> &g;
     TreeDiameter(Graph<T> &_g) : g(_g) {}
     /**
@@ -36,10 +36,10 @@ struct TreeDiameter{
         return q.first;
     }
     private:
-    vector<int> to;
+    std::vector<int> to;
 
-    pair<T,int>dfs(int idx,int par){
-        pair<T,int> ret(0,idx);
+    std::pair<T,int>dfs(int idx,int par){
+        std::pair<T,int> ret(0,idx);
         for(auto &e : g[idx]){
             if(e.to == par) continue;
             auto cost = dfs(e.to,idx);
