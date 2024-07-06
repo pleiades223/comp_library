@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/Weighted Union Find.test.cpp
+    title: verify/Weighted Union Find.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Weighted Union Find
     links: []
@@ -59,8 +62,9 @@ data:
   path: graph/Weighted-Union-Find.hpp
   requiredBy: []
   timestamp: '2024-07-07 00:15:29+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/Weighted Union Find.test.cpp
 documentation_of: graph/Weighted-Union-Find.hpp
 layout: document
 redirect_from:

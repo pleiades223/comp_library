@@ -20,7 +20,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/Tree-Diameter.hpp
       title: "Tree-Diameter(\u6728\u306E\u76F4\u5F84)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/Weighted-Union-Find.hpp
       title: Weighted Union Find
   - name: math
