@@ -5,7 +5,10 @@
  * @brief Tree-Diameter(木の直径)
 */
 
-
+/**
+ * @brief 木の直径
+ * 
+ */
 template<typename T = long long>
 struct TreeDiameter{
     vector<Edge<T>> path;

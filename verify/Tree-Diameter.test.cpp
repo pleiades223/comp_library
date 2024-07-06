@@ -1,4 +1,4 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_A"
 #include <graph/Tree-Diameter.hpp>
 
 int main(){
