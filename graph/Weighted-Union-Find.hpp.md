@@ -2,17 +2,15 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: verify/Weighted Union Find.test.cpp
-    title: verify/Weighted Union Find.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
+    document_title: Weighted Union Find
     links: []
-  bundledCode: "#line 2 \"graph/Weighted Union Find.hpp\"\n#include <vector>\n/**\n\
-    \ * \u91CD\u307F\u4ED8\u304DUnion Find\n*/\nstruct WeightUnionfind{\n    WeightUnionfind(int\
+  bundledCode: "#line 2 \"graph/Weighted-Union-Find.hpp\"\n#include <vector>\n/**\n\
+    \ * @brief Weighted Union Find\n*/\nstruct WeightUnionfind{\n    WeightUnionfind(int\
     \ n){\n        parents_size.resize(n,-1);\n        Weight_list.resize(n);\n  \
     \  }\n\n    /**\n     * leader(i)\n     * root\u3092\u8FD4\u3059\n    */\n   \
     \ int leader(int i){\n        if(parents_size[i]<0){\n            return i;\n\
@@ -34,8 +32,8 @@ data:
     \    }\n\n    private:\n    std::vector<int> parents_size;\n    std::vector<long\
     \ long> Weight_list;\n    long long weight(int i){\n        leader(i);\n     \
     \   return Weight_list[i];\n    }\n};\n"
-  code: "#pragma once\n#include <vector>\n/**\n * \u91CD\u307F\u4ED8\u304DUnion Find\n\
-    */\nstruct WeightUnionfind{\n    WeightUnionfind(int n){\n        parents_size.resize(n,-1);\n\
+  code: "#pragma once\n#include <vector>\n/**\n * @brief Weighted Union Find\n*/\n\
+    struct WeightUnionfind{\n    WeightUnionfind(int n){\n        parents_size.resize(n,-1);\n\
     \        Weight_list.resize(n);\n    }\n\n    /**\n     * leader(i)\n     * root\u3092\
     \u8FD4\u3059\n    */\n    int leader(int i){\n        if(parents_size[i]<0){\n\
     \            return i;\n        }\n        int root = leader(parents_size[i]);\n\
@@ -58,46 +56,15 @@ data:
     \   return Weight_list[i];\n    }\n};"
   dependsOn: []
   isVerificationFile: false
-  path: graph/Weighted Union Find.hpp
+  path: graph/Weighted-Union-Find.hpp
   requiredBy: []
-  timestamp: '2024-03-12 16:20:16+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - verify/Weighted Union Find.test.cpp
-documentation_of: graph/Weighted Union Find.hpp
+  timestamp: '2024-07-07 00:15:29+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: graph/Weighted-Union-Find.hpp
 layout: document
+redirect_from:
+- /library/graph/Weighted-Union-Find.hpp
+- /library/graph/Weighted-Union-Find.hpp.html
 title: Weighted Union Find
 ---
-## 計算量
-初期化　O(N)
-クエリ　O(α(N))
-## leader
-```
-int leader(int i)
-```
-iを含む連結成分の代表元を返す。
-
-## merge
-```
-int merge(int a,int b,long long w)
-```
-aとbをマージし、bはaよりw重くする。
-新しい代表元を返す。
-
-## diff
-```
-long long diff(int a,int b)
-```
-b-aを返す。
-
-## same
-```
-bool same(int a,int b)
-```
-a,bが連結がどうかを返す。
-
-## size
-```
-int size(int i)
-```
-iの属する連結成分の大きさを返す。

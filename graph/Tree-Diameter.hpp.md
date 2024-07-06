@@ -6,14 +6,14 @@ data:
     title: "\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: verify/Dijkstra.test.cpp
-    title: verify/Dijkstra.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: verify/Tree-Diameter.test.cpp
+    title: verify/Tree-Diameter.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
-    document_title: Dijkstra
+    document_title: "Tree-Diameter(\u6728\u306E\u76F4\u5F84)"
     links: []
   bundledCode: "#line 2 \"graph/Graph-template.hpp\"\n#include <vector>\r\n#include\
     \ <iostream>\r\n\r\ntemplate<typename T = long long >\r\nstruct Edge{\r\n    long\
@@ -51,45 +51,49 @@ data:
     \   }\r\n    }\r\n\r\n    /**\r\n     * g[k]\r\n    */\r\n    inline std::vector<Edge<T>>\
     \ &operator[](const int &k) {\r\n        return g[k];\r\n    }\r\n    /**\r\n\
     \     * g[k]\r\n    */\r\n    inline const std::vector<Edge<T>> &operator[](const\
-    \ int &k) const {\r\n        return g[k];\r\n    }\r\n};\n#line 3 \"graph/Dijkstra.hpp\"\
-    \n#include <queue>\n/**\n * @brief Dijkstra\n*/\n\n/**\n * @brief Dijkstra\n *\
-    \ \n * @tparam long long\n * @param g \u30B0\u30E9\u30D5\n * @param start \u30B9\
-    \u30BF\u30FC\u30C8\u306E\u9802\u70B9\n * @param INF \u5B9A\u6570\n * @return Shortest_path<T>\
-    \ \n */\ntemplate<typename T = long long>\nShortest_path<T> dijkstra(const Graph<T>&g,int\
-    \ start,T INF){\n    std::vector<T> dist(g.size(),INF);\n    std::vector<int>\
-    \ from(g.size(),-1),id(g.size(),-1);\n    using P = std::pair<T,int>;\n    std::priority_queue<P,std::vector<P>,std::greater<P>\
-    \ > que;\n    dist[start]=0;\n    que.emplace(dist[start],start);\n    while(!que.empty()){\n\
-    \        P p=que.top();que.pop();\n        if(dist[p.second]<p.first)continue;\n\
-    \        for(auto edge:g[p.second]){\n            if(dist[edge.to]>p.first+edge.cost){\n\
-    \                dist[edge.to]=p.first+edge.cost;\n                from[edge.to]=p.second;\n\
-    \                id[edge.to]=edge.idx;\n                que.emplace(dist[edge.to],edge.to);\n\
-    \            }\n        }\n    }\n    return {dist,from,id};\n}\n"
+    \ int &k) const {\r\n        return g[k];\r\n    }\r\n};\n#line 3 \"graph/Tree-Diameter.hpp\"\
+    \n#include <queue>\n/**\n * @brief Tree-Diameter(\u6728\u306E\u76F4\u5F84)\n*/\n\
+    \n\ntemplate<typename T = long long>\nstruct TreeDiameter{\n    vector<Edge<T>>\
+    \ path;\n    Graph<T> &g;\n    TreeDiameter(Graph<T> &_g) : g(_g) {}\n    /**\n\
+    \     * @brief \u69CB\u7BC9\n     * \n     * @return T \n     */\n    T build(){\n\
+    \        to.assign(g.size(),-1);\n        auto p = dfs(0,-1);\n        auto q\
+    \ = dfs(p.second,-1);\n\n        int now = p.second;\n        while(now != p.second){\n\
+    \            for(auto &e : g[now]){\n                if (to[now] == e.to){\n \
+    \                   path.emplace_back(e);\n                }\n            }\n\
+    \            now = to[now];\n        }\n        return q.first;\n    }\n    private:\n\
+    \    vector<int> to;\n\n    pair<T,int>dfs(int idx,int par){\n        pair<T,int>\
+    \ ret(0,idx);\n        for(auto &e : g[idx]){\n            if(e.to == par) continue;\n\
+    \            auto cost = dfs(e.to,idx);\n            cost.first += e.cost;\n \
+    \           if(ret < cost){\n                ret = cost;\n                to[idx]\
+    \ = e.to;\n            }\n        }\n        return ret;\n    }\n};\n"
   code: "#pragma once\n#include \"graph/Graph-template.hpp\"\n#include <queue>\n/**\n\
-    \ * @brief Dijkstra\n*/\n\n/**\n * @brief Dijkstra\n * \n * @tparam long long\n\
-    \ * @param g \u30B0\u30E9\u30D5\n * @param start \u30B9\u30BF\u30FC\u30C8\u306E\
-    \u9802\u70B9\n * @param INF \u5B9A\u6570\n * @return Shortest_path<T> \n */\n\
-    template<typename T = long long>\nShortest_path<T> dijkstra(const Graph<T>&g,int\
-    \ start,T INF){\n    std::vector<T> dist(g.size(),INF);\n    std::vector<int>\
-    \ from(g.size(),-1),id(g.size(),-1);\n    using P = std::pair<T,int>;\n    std::priority_queue<P,std::vector<P>,std::greater<P>\
-    \ > que;\n    dist[start]=0;\n    que.emplace(dist[start],start);\n    while(!que.empty()){\n\
-    \        P p=que.top();que.pop();\n        if(dist[p.second]<p.first)continue;\n\
-    \        for(auto edge:g[p.second]){\n            if(dist[edge.to]>p.first+edge.cost){\n\
-    \                dist[edge.to]=p.first+edge.cost;\n                from[edge.to]=p.second;\n\
-    \                id[edge.to]=edge.idx;\n                que.emplace(dist[edge.to],edge.to);\n\
-    \            }\n        }\n    }\n    return {dist,from,id};\n}"
+    \ * @brief Tree-Diameter(\u6728\u306E\u76F4\u5F84)\n*/\n\n\ntemplate<typename\
+    \ T = long long>\nstruct TreeDiameter{\n    vector<Edge<T>> path;\n    Graph<T>\
+    \ &g;\n    TreeDiameter(Graph<T> &_g) : g(_g) {}\n    /**\n     * @brief \u69CB\
+    \u7BC9\n     * \n     * @return T \n     */\n    T build(){\n        to.assign(g.size(),-1);\n\
+    \        auto p = dfs(0,-1);\n        auto q = dfs(p.second,-1);\n\n        int\
+    \ now = p.second;\n        while(now != p.second){\n            for(auto &e :\
+    \ g[now]){\n                if (to[now] == e.to){\n                    path.emplace_back(e);\n\
+    \                }\n            }\n            now = to[now];\n        }\n   \
+    \     return q.first;\n    }\n    private:\n    vector<int> to;\n\n    pair<T,int>dfs(int\
+    \ idx,int par){\n        pair<T,int> ret(0,idx);\n        for(auto &e : g[idx]){\n\
+    \            if(e.to == par) continue;\n            auto cost = dfs(e.to,idx);\n\
+    \            cost.first += e.cost;\n            if(ret < cost){\n            \
+    \    ret = cost;\n                to[idx] = e.to;\n            }\n        }\n\
+    \        return ret;\n    }\n};\n"
   dependsOn:
   - graph/Graph-template.hpp
   isVerificationFile: false
-  path: graph/Dijkstra.hpp
+  path: graph/Tree-Diameter.hpp
   requiredBy: []
   timestamp: '2024-07-07 00:15:29+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - verify/Dijkstra.test.cpp
-documentation_of: graph/Dijkstra.hpp
+  - verify/Tree-Diameter.test.cpp
+documentation_of: graph/Tree-Diameter.hpp
 layout: document
 redirect_from:
-- /library/graph/Dijkstra.hpp
-- /library/graph/Dijkstra.hpp.html
-title: Dijkstra
+- /library/graph/Tree-Diameter.hpp
+- /library/graph/Tree-Diameter.hpp.html
+title: "Tree-Diameter(\u6728\u306E\u76F4\u5F84)"
 ---

@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: template/template-code.cpp
+    title: template/template-code.cpp
+  - icon: ':warning:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedVerifiedWith: []
@@ -36,6 +39,7 @@ data:
   path: template/include.hpp
   requiredBy:
   - template/template.hpp
+  - template/template-code.cpp
   timestamp: '2024-03-11 13:48:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

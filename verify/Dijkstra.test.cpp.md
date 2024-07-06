@@ -3,8 +3,8 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/Dijkstra.hpp
-    title: graph/Dijkstra.hpp
-  - icon: ':heavy_check_mark:'
+    title: Dijkstra
+  - icon: ':question:'
     path: graph/Graph-template.hpp
     title: "\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -35,7 +35,7 @@ data:
   isVerificationFile: true
   path: verify/Dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2024-03-12 16:33:15+09:00'
+  timestamp: '2024-07-07 00:15:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/Dijkstra.test.cpp
